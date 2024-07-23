@@ -10,14 +10,17 @@ sourceSets.main.java.srcDirs = ["src"]
 
 repositories{
     mavenCentral()
-    maven{ url 'https://raw.githubusercontent.com/Zelaux/MindustryRepo/master/repository' }
     maven{ url 'https://www.jitpack.io' }
 }
 
 ext{
     //the build number that this mod is made for
     mindustryVersion = 'v146'
-    jabelVersion = "0.7.0"
+    mindustryBeVersion = '25136'
+    uncVersion = '3397fc68eb'
+
+//    jabelVersion = "93fde537c7"
+
     sdkRoot = System.getenv("ANDROID_HOME") ?: System.getenv("ANDROID_SDK_ROOT")
 }
 
@@ -30,9 +33,10 @@ allprojects{
 }
 
 dependencies{
+    annotationProcessor "com.github.EB-wilson.UniverseCore:annotations:$uncVersion" // 使用Unc注解处理器替代jabel
+
     compileOnly "com.github.Anuken.Arc:arc-core:$mindustryVersion"
-    compileOnly "com.github.Anuken.Mindustry:core:$mindustryVersion"
-    annotationProcessor "com.github.Anuken:jabel:$jabelVersion"
+    compileOnly files("libs/Mindustry-BE-25136.jar")
 }
 
 task jarAndroid{
