@@ -18,8 +18,10 @@ import mi2u.*;
 import mi2u.input.*;
 import mi2u.io.*;
 import mi2u.ui.elements.*;
+import mindustry.*;
 import mindustry.core.*;
 import mindustry.game.*;
+import mindustry.game.MapObjectives.*;
 import mindustry.gen.*;
 import mindustry.graphics.*;
 import mindustry.input.*;
@@ -413,9 +415,11 @@ public class MinimapMindow extends Mindow2{
 
             //could be buggy
             if(drawObjective){
-                state.rules.objectives.eachRunning(obj -> {
-                    for(var marker : obj.markers){
-                        marker.drawMinimap(renderer.minimap);
+                state.rules.objectives.eachRunning((obj) -> {
+                    for(ObjectiveMarker marker : obj.markers){
+                        if(marker.minimap){
+                            marker.draw(1f);
+                        }
                     }
                 });
             }
