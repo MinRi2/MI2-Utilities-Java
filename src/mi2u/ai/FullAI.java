@@ -346,7 +346,7 @@ public class FullAI extends AIController{
         public boolean attack = true, heal = true;
         public AutoTargetMode(){
             btext = "AT";
-            bimg = Core.atlas.drawable("mi2-utilities-java-ui-shoot");
+            bimg = Core.atlas.drawable(modPrefix + "ui-shoot");
         }
         @Override
         public void act(){
@@ -389,7 +389,7 @@ public class FullAI extends AIController{
         public CenterFollowMode(){
             btext = Iconc.move + "";
             enable = mobile;
-            bimg = Core.atlas.drawable("mi2-utilities-java-ui-centermove");
+            bimg = Core.atlas.drawable(modPrefix + "ui-centermove");
         }
         @Override
         public void act(){
@@ -485,7 +485,7 @@ public class FullAI extends AIController{
             bannedInstructions.clear();
             bannedInstructions.addAll(ControlI.class, WriteI.class, StopI.class, SetBlockI.class, SpawnUnitI.class, ApplyEffectI.class, SetRuleI.class, SetRateI.class, ExplosionI.class, SetFlagI.class, SpawnWaveI.class, SetPropI.class);
             btext = Iconc.blockWorldProcessor + "";
-            bimg = Core.atlas.drawable("mi2-utilities-java-ui-customai");
+            bimg = Core.atlas.drawable("modPrefix + ui-customai");
 
             LogicMode.logicMode.codes = Core.settings.getJson("ai.logic.codes", Seq.class, LogicModeCode.class, () -> Seq.with(new LogicModeCode("" + Iconc.edit + Iconc.map, "jump 26 strictEqual init 2\n" +
                     "set brush.size 2\n" +

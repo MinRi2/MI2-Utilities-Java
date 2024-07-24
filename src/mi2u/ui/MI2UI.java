@@ -118,7 +118,7 @@ public class MI2UI extends Mindow2{
                 }).with(funcSetTextb).with(b -> {
                     b.margin(4f);
                     b.table(bii -> {
-                        bii.image(Core.atlas.find("mi2-utilities-java-ui-speed")).size(24f).update(img -> {
+                        bii.image(Core.atlas.find("modPrefix + ui-speed")).size(24f).update(img -> {
                             img.setOrigin(Align.center);
                             if(SpeedController.update) img.setRotation(Mathf.log2(SpeedController.scl) * 45f);
                             else img.setRotation(0f);
@@ -133,7 +133,7 @@ public class MI2UI extends Mindow2{
             play.row();
             play.table(tt -> {
                 tt.button(b -> {
-                    b.image(Core.atlas.drawable("mi2-utilities-java-ui-aicfg")).size(24f).scaling(Scaling.fit);
+                    b.image(Core.atlas.drawable("modPrefix + ui-aicfg")).size(24f).scaling(Scaling.fit);
                 }, textb, () -> {
                     popup.clear();
                     popup.addCloseButton();

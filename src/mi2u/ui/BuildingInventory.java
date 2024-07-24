@@ -167,5 +167,5 @@ public class BuildingInventory extends Element{
         font.getData().setScale(oldScaleX, oldScaleY);
     }
 
-    public static Drawable ammoIcon = Core.atlas.getDrawable("mi2-utilities-java-ui-ammo");
+    public static Drawable ammoIcon = Core.atlas.getDrawable("modPrefix + ui-ammo");
 }

@@ -1,8 +1,8 @@
 #the mod name as displayed in-game
-displayName: "MI2-Utilities Java"
+displayName: "MI2-Utilities Java BE"
 
 #the internal name of your mod
-name: "mi2-utilities-java"
+name: "mi2-utilities-java-be"
 
 #the mod version
 version: 1.6.2

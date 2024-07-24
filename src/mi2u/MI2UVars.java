@@ -12,6 +12,9 @@ import mi2u.ui.elements.*;
 import mindustry.ui.*;
 
 public class MI2UVars{
+    public static final String modName = "mi2-utilities-java-be";
+    public static final String modPrefix = modName + "-";
+
     public static float titleButtonSize = 32f;
     public static TextButtonStyle textb = Styles.flatt, textbtoggle = Styles.flatTogglet;
     public static Cons<TextButton> funcSetTextb = c -> {
